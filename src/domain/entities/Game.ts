@@ -7,6 +7,10 @@ export class Game {
     this._events = events;
   }
 
+  set events(events: Event[]) {
+    this._events = events;
+  }
+
   get events(): Event[] {
     return this._events;
   }

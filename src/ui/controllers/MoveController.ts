@@ -11,9 +11,7 @@ export class MoveController {
   }
 
   makeMove(makeMoveCommand: MakeMoveCommand): any {
-
-
-    const result = this.makeMoveCommandHandler.handleCommand(makeMoveCommand);
+    this.makeMoveCommandHandler.handleCommand(makeMoveCommand);
 
     return true;
   }

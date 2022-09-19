@@ -7,9 +7,8 @@ const chessRouter = express.Router();
 
 chessRouter.post('/', async (request, response) => {
   try {
-
     let moveController = new MoveController(new MakeMoveCommandHandler());
-    let moveCommand = new MakeMoveCommand(request.body.piece, request.body.move, request.body.game);
+    let moveCommand = new MakeMoveCommand(request.body.piece, request.body.move);
     let result = moveController.makeMove(moveCommand);
 
     return response.status(201).send(result);

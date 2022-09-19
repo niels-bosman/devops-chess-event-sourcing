@@ -5,10 +5,15 @@ import { Event } from './Event'
 export class MoveMade extends Event {
   private move: Move
   private piece: Piece
+  public name = 'MoveMade'
 
   constructor(move: Move, piece: Piece) {
     super()
     this.move = move
     this.piece = piece
+  }
+
+  public toString(): string {
+    return `${this.name}:${this.piece}:${this.move}`
   }
 }
