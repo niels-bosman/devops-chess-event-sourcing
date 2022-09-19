@@ -14,6 +14,9 @@ export class MoveMade extends Event {
   }
 
   public toString(): string {
-    return `${this.name}:${this.piece}:${this.move}`
+    return JSON.stringify({
+      move: this.move.toString(),
+      piece: this.piece.toString(),
+    })
   }
 }
