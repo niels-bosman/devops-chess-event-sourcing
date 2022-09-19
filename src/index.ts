@@ -5,8 +5,10 @@ import chessRouter from './routes/chess-route';
 
 
 const app = express();
-const PORT = env("", "5005");
-const MONGO_URI = env("", "");
+const PORT = 5002;
+const MONGO_USER = env("MONGO_INITDB_ROOT_USERNAME", "");
+const MONGO_PASSWORD = env("MONGO_INITDB_ROOT_PASSWORD", "");
+const MONGO_URI = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@localhost:5001`;
 
 app.use(express.json());
 
