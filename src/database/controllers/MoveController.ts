@@ -1,5 +1,4 @@
 import { MakeMoveCommandHandler } from "../../command-handler/MakeMoveCommandHandler";
-import { Response } from "express";
 import { MakeMoveCommand } from "../../commands/makeMoveCommand";
 
 export class MoveController {
@@ -15,5 +14,4 @@ export class MoveController {
 
     return true;
   }
-
 }
