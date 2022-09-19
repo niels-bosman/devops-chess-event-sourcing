@@ -16,7 +16,7 @@ export class MakeMoveCommandHandler {
     let move = new Move();
     // TODO map command to move
 
-    const eventsToSave = game.GetEvents();
+    const eventsToSave = game.events;
 
     // TODO publish events
 

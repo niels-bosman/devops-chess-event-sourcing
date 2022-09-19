@@ -1,10 +1,13 @@
+import { Event } from '../../events/Event'
+
 export class Game {
-  constructor(events: any) {
+  _events: Event[] = [];
 
+  constructor(events: Event[]) {
+    this._events = events;
   }
 
-  GetEvents(): any {
-    return [];
+  get events(): Event[] {
+    return this._events;
   }
-
 }
