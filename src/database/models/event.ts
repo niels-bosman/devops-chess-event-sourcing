@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const eventSchema = new mongoose.Schema({
   Date: {
     type: Date,
-    default: new Date().toLocaleDateString(),
+    default: new Date(),
   },
   Type: {
     type: String,
