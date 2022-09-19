@@ -3,8 +3,8 @@ import { Piece } from '../domain/entities/Piece'
 import { Event } from './Event'
 
 export class MoveMade extends Event {
-  public move: Move
-  public piece: Piece
+  private move: Move
+  private piece: Piece
 
   constructor(move: Move, piece: Piece) {
     super()
