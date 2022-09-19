@@ -12,5 +12,5 @@ export class EventController {
       EventData: event.toString(),
     }).save()
   }
-  
+
 }
