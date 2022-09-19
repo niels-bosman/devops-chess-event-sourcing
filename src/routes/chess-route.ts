@@ -1,10 +1,18 @@
 import express from 'express';
+import { MoveController } from "../ui/controllers/MoveController";
+import { MakeMoveCommandHandler } from "../command-handler/MakeMoveCommandHandler";
+import { MakeMoveCommand } from "../commands/makeMoveCommand";
 
 const chessRouter = express.Router();
 
 chessRouter.post('/', async (request, response) => {
   try {
-    return response.status(201).send("test");
+
+    let moveController = new MoveController(new MakeMoveCommandHandler());
+    let moveCommand = new MakeMoveCommand(request.body.piece, request.body.move, request.body.game);
+    let result = moveController.makeMove(moveCommand);
+
+    return response.status(201).send(result);
   } catch (e: any) {
   }
 });
