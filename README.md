@@ -86,7 +86,7 @@ You can also choose to install and use [invariant](https://github.com/palmerhq/t
 
 CJS, ESModules, and UMD module formats are supported.
 
-The appropriate paths are configured in `package.json` and `dist/index.js` accordingly. Please report if any issues are found.
+The appropriate paths are configured in `package.json` and `dist/index.ts` accordingly. Please report if any issues are found.
 
 ## Named Exports
 
